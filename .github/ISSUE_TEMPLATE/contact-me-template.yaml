@@ -1,0 +1,52 @@
+name: Contact Me
+description: Get in touch with me
+title: "[Contact]: "
+labels: ["contact"]
+assignees:
+  - RossBugginsNHS
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to get in touch
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if I need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-is-this-about
+    attributes:
+      label: Your message
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "Hello, World!"
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: Is this about anything in particular
+      options:
+        - NHS Citizen Experence
+        - Something else
+    validations:
+      required: false
+  - type: textarea
+    id: any-other-info
+    attributes:
+      label: Any other info
+      description: Please copy and paste any relevant output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
